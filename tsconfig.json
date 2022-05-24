@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "es2017",
+    "target": "es2020",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./examples/nest",
+    "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true
   }
