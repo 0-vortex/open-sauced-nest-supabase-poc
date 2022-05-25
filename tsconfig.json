@@ -1,17 +1,26 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
     "moduleResolution": "Node",
-    "declaration": true,
-    "removeComments": true,
+    "module": "es2020",
+    "lib": ["es2020"],
+    "target": "es2020",
+    "importsNotUsedAsValues": "error",
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2020",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
-    "skipLibCheck": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "allowJs": true,
+    "checkJs": true,
+    "outDir": "./dist"
+
+//    "declaration": true,
+//    "removeComments": true,
+//    "allowSyntheticDefaultImports": true,
+//    "incremental": true,
   }
 }

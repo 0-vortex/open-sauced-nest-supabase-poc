@@ -19,6 +19,8 @@ export default defineConfig({
       'class-transformer',
       'class-validator',
       'fastify-swagger',
+      'typeorm',
+      '@nestjs/typeorm',
     ],
   },
 });
