@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity({ name: 'repo' })
-export class RepoEntity {
+@Entity({ name: 'repos' })
+export class Repo {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -21,7 +21,7 @@ export class RepoEntity {
   subscribers: number;
 
   @Column({ default: false })
-  isFork: boolean;
+  is_fork: boolean;
 
   @Column({ type: 'date' })
   created_at: string;

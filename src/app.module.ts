@@ -3,6 +3,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { RepoModule } from './repo/repo.module';
+
+import { Repo } from './repo/repo.entity';
 
 @Module({
   imports: [
@@ -13,13 +16,12 @@ import { AppService } from './app.service';
       username: import.meta.env.VITE_DB_USERNAME,
       password: import.meta.env.VITE_DB_PASSWORD,
       database: import.meta.env.VITE_DB_NAME,
-      autoLoadEntities: false,
+      autoLoadEntities: true,
       synchronize: false,
-      // entities: [
-      //   new URL('/**/*.entity{.ts,.js}', import.meta.url).pathname,
-      //   new URL('/**/*.view-entity{.ts,.js}', import.meta.url).pathname,
-      // ],
+      keepConnectionAlive: true,
+      entities: [Repo],
     }),
+    RepoModule,
   ],
   controllers: [AppController],
   providers: [AppService],
