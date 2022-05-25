@@ -17,10 +17,5 @@
     "allowJs": true,
     "checkJs": true,
     "outDir": "./dist"
-
-//    "declaration": true,
-//    "removeComments": true,
-//    "allowSyntheticDefaultImports": true,
-//    "incremental": true,
   }
 }
