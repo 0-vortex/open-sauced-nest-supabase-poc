@@ -2,7 +2,7 @@
   "name": "open-sauced-nest-supabase-poc",
   "version": "0.0.0-development",
   "keywords": [],
-  "description": "",
+  "description": "Experimenting with nest supabase API for hot.opensauced.pizza",
   "author": "TED Vortex <ted.vortex@gmail.com>",
   "private": true,
   "license": "MIT",
