@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS public.repos
 (
   -- Static columns
   id bigint NOT NULL,
-  user_id bigint NOT NULL,
+  user_id bigint NOT NULL REFERENCES public.users (id),
   issues bigint NOT NULL DEFAULT 0,
   stars bigint NOT NULL DEFAULT 0,
   watchers bigint NOT NULL DEFAULT 0,

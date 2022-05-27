@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Connection, Repository } from 'typeorm';
+import { Repository } from "typeorm";
 import { InjectRepository } from '@nestjs/typeorm';
 
 import { Repo } from './repo.entity';
@@ -9,11 +9,14 @@ export class RepoService {
   constructor(
     @InjectRepository(Repo)
     private repoRepository: Repository<Repo>,
-    private connection: Connection,
   ) {}
 
   async findAll(): Promise<Repo[]> {
     return await this.repoRepository.find({
+      select: {
+        id: true,
+        issues: true,
+      },
       take: 10,
     });
   }
